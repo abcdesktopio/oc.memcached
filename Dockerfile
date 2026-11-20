@@ -1,6 +1,6 @@
 FROM memcached:alpine
 
 USER root
+# update for CVE
 RUN apk update --no-cache && apk upgrade --no-cache 
-RUN apk add --no-cache "libssl3>3.5.4"
 USER memcache
